@@ -41,9 +41,9 @@ return (
                   )}
                 </motion.a>
               ))}
-              <button className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+              <a href="https://cronos-ruby.vercel.app" target="_blank" rel="noopener noreferrer" className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
                 Começar Agora
-              </button>
+              </a>
             </div>
           </div>
           <div className="md:hidden">
@@ -59,9 +59,9 @@ return (
             <a href="#features" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Funcionalidades</a>
             <a href="#pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Preços</a>
             <a href="#faq" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
-            <button className="w-full text-left bg-indigo-500 hover:bg-indigo-600 text-white px-3 py-2 rounded-md text-base font-medium">
+            <a href="https://cronos-ruby.vercel.app" target="_blank" rel="noopener noreferrer" className="w-full text-left bg-indigo-500 hover:bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium">
               Começar Agora
-            </button>
+            </a>
           </div>
         </div>
       )}

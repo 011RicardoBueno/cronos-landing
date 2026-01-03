@@ -97,7 +97,9 @@ const ForOwners = () => {
               <p className="text-slate-300">Experimente todas as funcionalidades por 14 dias grátis.</p>
             </div>
             <a 
-              href="#cta" 
+                    href="https://cronos-ruby.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
               className="btn-primary mt-6 lg:mt-0"
             >
               Começar Teste Gratuito

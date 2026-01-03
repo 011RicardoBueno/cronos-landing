@@ -471,7 +471,7 @@ const DashboardDemo = () => {
           <p className="text-slate-400 mb-6">
             Este é apenas um exemplo. Seu dashboard será personalizado para o seu negócio.
           </p>
-          <a href="#cta" className="btn-primary inline-flex items-center">
+                <a href="https://cronos-ruby.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center">
             Experimente o Dashboard Completo
           </a>
         </div>

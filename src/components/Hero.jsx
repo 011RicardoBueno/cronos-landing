@@ -28,12 +28,12 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <button className="btn-primary flex items-center justify-center gap-2 hover:scale-105">
+          <a href="https://cronos-ruby.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center justify-center gap-2 hover:scale-105">
             Teste Grátis por 14 dias <ArrowRight className="h-5 w-5" />
-          </button>
-          <button className="btn-secondary">
+          </a>
+          <a href="https://cronos-ruby.vercel.app" target="_blank" rel="noopener noreferrer" className="btn-secondary flex items-center justify-center">
             Ver Demonstração
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
