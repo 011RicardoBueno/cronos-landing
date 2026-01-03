@@ -10,6 +10,7 @@ import Pricing from './components/Pricing'
 import FAQ from './components/FAQ'
 import CTASection from './components/CTASection'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <CTASection />
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }
