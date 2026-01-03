@@ -1,5 +1,6 @@
 import { Check, Star, Zap, Crown } from 'lucide-react'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const Pricing = () => {
   const [billingPeriod, setBillingPeriod] = useState('monthly')
@@ -116,13 +117,17 @@ const Pricing = () => {
             const period = billingPeriod === 'monthly' ? 'mês' : 'ano'
             
             return (
-              <div 
+              <motion.div 
                 key={index}
                 className={`relative card-gradient p-8 transition-all duration-300 hover:-translate-y-2 ${
                   plan.popular 
                     ? 'border-2 border-violet-500/50 shadow-xl shadow-violet-500/10' 
                     : 'border border-slate-700'
                 }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -182,7 +187,7 @@ const Pricing = () => {
                     Teste grátis por 14 dias
                   </div>
                 )}
-              </div>
+              </motion.div>
             )
           })}
         </div>

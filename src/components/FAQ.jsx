@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown, MessageCircle, Clock, CreditCard, Smartphone, Shield } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null)
@@ -80,17 +81,21 @@ const FAQ = () => {
                 />
               </button>
               
-              <div 
-                className={`px-6 overflow-hidden transition-all duration-300 ${
-                  openIndex === index 
-                    ? 'pb-6 opacity-100 max-h-96' 
-                    : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="pl-16 pr-6">
-                  <p className="text-slate-300">{item.answer}</p>
-                </div>
-              </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="px-6 overflow-hidden"
+                  >
+                    <div className="pl-16 pr-6 pb-6">
+                      <p className="text-slate-300">{item.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

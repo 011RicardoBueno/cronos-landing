@@ -1,4 +1,5 @@
 import { Smartphone, Clock, Star, MessageSquare, Bell, CreditCard, Shield, Calendar, Users } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const ForClients = () => {
   const clientFeatures = [
@@ -58,9 +59,13 @@ const ForClients = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {clientFeatures.map((feature, index) => (
-            <div 
+            <motion.div 
               key={index}
               className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-violet-500/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="mb-6">
                 <div className="inline-flex p-4 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-2xl">
@@ -79,7 +84,7 @@ const ForClients = () => {
                   <span className="text-violet-400 text-sm">✓</span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         

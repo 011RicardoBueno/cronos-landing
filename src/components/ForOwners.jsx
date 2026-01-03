@@ -1,4 +1,5 @@
 import { BarChart3, Users, Calendar, DollarSign, Settings, Shield, PieChart, Bell, FileText, Zap } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const ForOwners = () => {
   const features = [
@@ -58,9 +59,13 @@ const ForOwners = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
+            <motion.div 
               key={index}
               className="card-gradient p-8 hover:border-indigo-500/50 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="mb-6">
                 <div className="inline-flex p-4 bg-gradient-to-br from-indigo-500/10 to-violet-500/10 rounded-2xl group-hover:from-indigo-500/20 group-hover:to-violet-500/20 transition-colors">
@@ -81,7 +86,7 @@ const ForOwners = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
         

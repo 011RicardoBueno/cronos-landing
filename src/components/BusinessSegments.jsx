@@ -1,4 +1,5 @@
 import { Scissors, Sparkles, Heart, Hand, PenTool, Dumbbell, CheckCircle } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const BusinessSegments = () => {
   const segments = [
@@ -55,9 +56,13 @@ const BusinessSegments = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {segments.map((segment, index) => (
-            <div 
+            <motion.div 
               key={index}
               className="group bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="flex items-start space-x-4 mb-6">
                 <div className="p-3 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 rounded-xl group-hover:from-indigo-500/30 group-hover:to-violet-500/30 transition-colors">
@@ -79,7 +84,7 @@ const BusinessSegments = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

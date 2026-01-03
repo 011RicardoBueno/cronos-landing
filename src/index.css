@@ -45,13 +45,57 @@
     @apply bg-gradient-to-r from-indigo-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent;
   }
   
-  .bg-grid-pattern {
-    background-image: 
-      linear-gradient(to right, #334155 1px, transparent 1px),
-      linear-gradient(to bottom, #334155 1px, transparent 1px);
-    background-size: 40px 40px;
+  .bg-hero-animation::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 40%);
+    animation: rotate 20s linear infinite;
   }
-  
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .aurora-background {
+    @apply absolute inset-0 -z-10 overflow-hidden;
+  }
+
+  .aurora-background::before,
+  .aurora-background::after {
+    content: '';
+    @apply absolute w-[1000px] h-[1000px] rounded-full mix-blend-screen opacity-15;
+    filter: blur(120px);
+  }
+
+  .aurora-background::before {
+    background-color: #6366f1; /* indigo-500 */
+    top: -400px;
+    left: -400px;
+    animation: move-aurora-1 25s infinite alternate ease-in-out;
+  }
+
+  .aurora-background::after {
+    background-color: #8b5cf6; /* violet-500 */
+    bottom: -400px;
+    right: -400px;
+    animation: move-aurora-2 30s infinite alternate ease-in-out;
+  }
+
+  @keyframes move-aurora-1 {
+    from { transform: translate(0, 0) rotate(0deg); }
+    to { transform: translate(200px, 100px) rotate(45deg); }
+  }
+
+  @keyframes move-aurora-2 {
+    from { transform: translate(0, 0) rotate(0deg); }
+    to { transform: translate(-200px, -100px) rotate(-45deg); }
+  }
+
   /* Smooth scroll para toda a página */
   html {
     scroll-behavior: smooth;
