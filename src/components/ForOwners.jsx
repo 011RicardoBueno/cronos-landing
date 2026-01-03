@@ -52,7 +52,7 @@ const ForOwners = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Tudo o que você precisa para <span className="text-gradient">gerenciar</span> seu negócio
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
             Uma plataforma completa com todas as ferramentas para você focar no crescimento do seu negócio.
           </p>
         </div>
@@ -76,11 +76,11 @@ const ForOwners = () => {
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-slate-400 mb-6">{feature.description}</p>
+              <p className="text-slate-300 mb-6">{feature.description}</p>
               
               <ul className="space-y-3">
                 {feature.items.map((item, idx) => (
-                  <li key={idx} className="flex items-center text-slate-300">
+                  <li key={idx} className="flex items-center text-slate-200">
                     <div className="h-2 w-2 bg-indigo-500 rounded-full mr-3"></div>
                     <span>{item}</span>
                   </li>
@@ -94,7 +94,7 @@ const ForOwners = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">Pronto para transformar sua gestão?</h3>
-              <p className="text-slate-300">Experimente todas as funcionalidades por 14 dias grátis.</p>
+                <p className="text-slate-200">Experimente todas as funcionalidades por 14 dias grátis.</p>
             </div>
             <a 
                     href="https://cronos-ruby.vercel.app"

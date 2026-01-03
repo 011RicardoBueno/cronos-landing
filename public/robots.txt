@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Google Ads
+User-agent: AdsBot-Google
+Allow: /
+
+# Rate limit
+Crawl-delay: 2
+
+Sitemap: https://crono-wapp.netlify.app/sitemap.xml

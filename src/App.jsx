@@ -17,7 +17,7 @@ function App() {
     <div className="relative min-h-screen bg-slate-950 text-white overflow-x-clip">
       <div className="aurora-background"></div>
       <Header />
-      <main>
+      <main id="main-content" tabIndex="-1">
         <Hero />
         <BusinessSegments />
         <ForOwners />

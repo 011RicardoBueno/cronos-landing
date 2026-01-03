@@ -81,7 +81,7 @@ const Pricing = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Escolha o plano <span className="text-gradient">perfeito</span> para você
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto mb-12">
             Experimente grátis por 14 dias. Sem cartão de crédito necessário.
           </p>
           
@@ -92,17 +92,17 @@ const Pricing = () => {
               className={`px-6 py-3 rounded-full font-medium transition-all ${
                 billingPeriod === 'monthly'
                   ? 'bg-gradient-to-r from-indigo-500 to-violet-500 text-white'
-                  : 'text-slate-400 hover:text-white'
+                  : 'text-slate-300 hover:text-white'
               }`}
             >
               Mensal
             </button>
             <button
               onClick={() => setBillingPeriod('yearly')}
-              className={`px-6 py-3 rounded-full font-medium transition-all ${
+              className={`px-6 py-3 rounded-full font-medium transition-all relative ${
                 billingPeriod === 'yearly'
                   ? 'bg-gradient-to-r from-indigo-500 to-violet-500 text-white'
-                  : 'text-slate-400 hover:text-white'
+                  : 'text-slate-300 hover:text-white'
               }`}
             >
               Anual <span className="ml-2 text-sm bg-emerald-500 text-white px-2 py-1 rounded-full">-{calculateSavings(plans[1].monthlyPrice, plans[1].yearlyPrice)}%</span>
@@ -146,14 +146,14 @@ const Pricing = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
-                      <p className="text-slate-400">{plan.description}</p>
+                      <p className="text-slate-300">{plan.description}</p>
                     </div>
                   </div>
                   
                   <div className="mt-6">
                     <div className="flex items-baseline">
                       <span className="text-4xl font-bold text-white">R$ {price}</span>
-                      <span className="text-slate-400 ml-2">/{period}</span>
+                      <span className="text-slate-300 ml-2">/{period}</span>
                     </div>
                     {billingPeriod === 'yearly' && (
                       <div className="text-sm text-emerald-500 mt-2">
@@ -166,7 +166,7 @@ const Pricing = () => {
                 <div className="mb-8">
                   <ul className="space-y-4">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-slate-300">
+                      <li key={idx} className="flex items-center text-slate-200">
                         <Check className="h-5 w-5 text-emerald-500 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>

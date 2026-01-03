@@ -75,7 +75,7 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             O que nossos clientes <span className="text-gradient">estão dizendo</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
             Mais de 200 negócios de serviços já transformaram sua gestão com o Fluxo.
           </p>
         </div>
@@ -92,7 +92,7 @@ const Testimonials = () => {
             >
               <Quote className="h-8 w-8 text-amber-500/30 mb-6" />
               
-              <p className="text-slate-300 mb-8 italic">"{testimonial.content}"</p>
+              <p className="text-slate-200 mb-8 italic">"{testimonial.content}"</p>
               
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
@@ -101,7 +101,7 @@ const Testimonials = () => {
                   </div>
                   <div>
                     <div className="font-bold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-slate-400">{testimonial.role}</div>
+                    <div className="text-sm text-slate-300">{testimonial.role}</div>
                   </div>
                 </div>
                 
@@ -111,7 +111,7 @@ const Testimonials = () => {
               </div>
               
               <div className="mt-4 pt-4 border-t border-slate-700">
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200">
                   {testimonial.business}
                 </span>
               </div>
@@ -124,19 +124,19 @@ const Testimonials = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2">200+</div>
-              <div className="text-slate-400">Negócios Atendidos</div>
+                    <div className="text-slate-300">Negócios Atendidos</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2">4.8</div>
-              <div className="text-slate-400">Avaliação Média</div>
+                    <div className="text-slate-300">Avaliação Média</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2">98%</div>
-              <div className="text-slate-400">Taxa de Retenção</div>
+                    <div className="text-slate-300">Taxa de Retenção</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-white mb-2">24h</div>
-              <div className="text-slate-400">Suporte Médio</div>
+                    <div className="text-slate-300">Suporte Médio</div>
             </div>
           </div>
         </div>

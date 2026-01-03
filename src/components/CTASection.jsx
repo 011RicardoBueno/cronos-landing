@@ -64,31 +64,44 @@ const CTASection = () => {
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl">
               <h3 className="text-2xl font-bold text-white mb-2">Comece agora mesmo</h3>
               <p className="text-slate-400 mb-8">Preencha os dados abaixo para iniciar seu teste gratuito</p>
-              
+
               <form className="space-y-6">
                 <div>
-                  <label className="block text-slate-300 mb-2">Seu nome completo</label>
-                  <input 
-                    type="text" 
-                    placeholder="João Silva"
-                    className="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
-                  />
-                </div>
-                
+            <label htmlFor="user-name" className="block text-slate-300 mb-2">
+              Seu nome completo <span className="text-rose-500">*</span>
+            </label>
+            <input 
+              id="user-name"
+              type="text" 
+              placeholder="João Silva"
+              required
+              className="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+              aria-required="true"
+            />
+          </div>
                 <div>
-                  <label className="block text-slate-300 mb-2">Email profissional</label>
-                  <input 
-                    type="email" 
-                    placeholder="seu@email.com"
-                    className="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
-                  />
-                </div>
-                
+            <label htmlFor="user-email" className="block text-slate-300 mb-2">
+              Email profissional <span className="text-rose-500">*</span>
+            </label>
+            <input 
+              id="user-email"
+              type="email" 
+              placeholder="seu@email.com"
+              required
+              className="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+              aria-required="true"
+            />
+          </div>
                 <div>
-                  <label className="block text-slate-300 mb-2">Tipo de negócio</label>
-                  <select 
-                    className="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-indigo-500 transition-colors"
-                  >
+            <label htmlFor="business-type" className="block text-slate-300 mb-2">
+              Tipo de negócio <span className="text-rose-500">*</span>
+            </label>
+            <select 
+              id="business-type"
+              required
+              className="w-full p-4 bg-slate-800 border border-slate-700 rounded-xl text-white focus:outline-none focus:border-indigo-500 transition-colors"
+              aria-required="true"
+            >
                     <option value="">Selecione...</option>
                     <option value="barbershop">Barbearia</option>
                     <option value="salon">Salão de Beleza</option>
@@ -98,11 +111,11 @@ const CTASection = () => {
                     <option value="fitness">Personal Trainer</option>
                     <option value="other">Outro</option>
                   </select>
-                </div>
-                
+          </div>
                 <button 
                   type="submit"
                   className="w-full bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/20 flex items-center justify-center space-x-3 group"
+                        aria-label="Iniciar teste gratuito do Fluxo"
                 >
                   <span>Começar Teste Grátis</span>
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />

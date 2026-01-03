@@ -1,10 +1,19 @@
 import { ArrowRight } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 const Hero = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 bg-hero-animation -z-10"></div>
+    <section ref={targetRef} className="relative overflow-hidden pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <motion.div style={{ y }} className="absolute inset-0 bg-hero-animation -z-10"></motion.div>
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -18,7 +27,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto"
+          className="text-xl text-slate-200 mb-10 max-w-2xl mx-auto"
         >
           Uma plataforma unificada para barbearias, salões, clínicas e estúdios. Controle completo do seu negócio em um só lugar.
         </motion.p>

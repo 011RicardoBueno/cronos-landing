@@ -48,7 +48,7 @@ const BusinessSegments = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Para <span className="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-transparent">Todos os Tipos</span> de Negócio
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
             O Fluxo foi desenvolvido para atender diversos segmentos de serviços. 
             Personalizamos a experiência para o seu tipo de negócio.
           </p>
@@ -72,13 +72,13 @@ const BusinessSegments = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">{segment.name}</h3>
-                  <p className="text-slate-400">{segment.description}</p>
+                  <p className="text-slate-300">{segment.description}</p>
                 </div>
               </div>
               
               <ul className="space-y-3">
                 {segment.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-slate-300">
+                  <li key={idx} className="flex items-center text-slate-200">
                     <CheckCircle className="h-5 w-5 text-emerald-500 mr-3 flex-shrink-0" />
                     <span>{feature}</span>
                   </li>

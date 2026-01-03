@@ -49,7 +49,7 @@ const FAQ = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Perguntas <span className="text-gradient">Frequentes</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-200 max-w-2xl mx-auto">
             Tire suas dúvidas sobre a plataforma, planos e funcionalidades.
           </p>
         </div>
@@ -75,7 +75,7 @@ const FAQ = () => {
                   </div>
                 </div>
                 <ChevronDown 
-                  className={`h-5 w-5 text-slate-400 transition-transform duration-300 ${
+                        className={`h-5 w-5 text-slate-300 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
@@ -91,7 +91,7 @@ const FAQ = () => {
                     className="px-6 overflow-hidden"
                   >
                     <div className="pl-16 pr-6 pb-6">
-                      <p className="text-slate-300">{item.answer}</p>
+                            <p className="text-slate-200">{item.answer}</p>
                     </div>
                   </motion.div>
                 )}
@@ -103,7 +103,7 @@ const FAQ = () => {
         {/* Still have questions */}
         <div className="mt-12 p-8 bg-gradient-to-r from-indigo-500/10 to-violet-500/10 border border-indigo-500/20 rounded-2xl text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ainda tem dúvidas?</h3>
-          <p className="text-slate-300 mb-6">
+                <p className="text-slate-200 mb-6">
             Nossa equipe está pronta para te ajudar a encontrar a solução perfeita para seu negócio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

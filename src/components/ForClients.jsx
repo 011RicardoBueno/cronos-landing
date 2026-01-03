@@ -52,7 +52,7 @@ const ForClients = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Encante seus clientes com uma <span className="text-gradient">experiência única</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
             Ofereça aos seus clientes a modernidade e praticidade que eles esperam.
           </p>
         </div>
@@ -76,7 +76,7 @@ const ForClients = () => {
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-              <p className="text-slate-400 mb-6">{feature.description}</p>
+              <p className="text-slate-300 mb-6">{feature.description}</p>
               
               <div className="flex items-center justify-between pt-6 border-t border-slate-700">
                 <span className="text-sm font-semibold text-violet-400">{feature.benefit}</span>
@@ -95,15 +95,15 @@ const ForClients = () => {
                 Seus clientes agradecem a <span className="text-gradient">experiência moderna</span>
               </h3>
               <ul className="space-y-4">
-                <li className="flex items-center text-slate-300">
+                <li className="flex items-center text-slate-200">
                   <div className="h-2 w-2 bg-emerald-500 rounded-full mr-3"></div>
                   <span>Taxa de remarcação reduzida em 40%</span>
                 </li>
-                <li className="flex items-center text-slate-300">
+                <li className="flex items-center text-slate-200">
                   <div className="h-2 w-2 bg-emerald-500 rounded-full mr-3"></div>
                   <span>NPS (Net Promoter Score) aumentado em 35 pontos</span>
                 </li>
-                <li className="flex items-center text-slate-300">
+                <li className="flex items-center text-slate-200">
                   <div className="h-2 w-2 bg-emerald-500 rounded-full mr-3"></div>
                   <span>Retenção de clientes 2x maior</span>
                 </li>
@@ -116,7 +116,7 @@ const ForClients = () => {
                   <MessageSquare className="h-8 w-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-4">Feedback em Tempo Real</h4>
-                <p className="text-slate-400">
+                <p className="text-slate-300">
                   Receba feedback imediato dos seus clientes e melhore continuamente seus serviços.
                 </p>
               </div>

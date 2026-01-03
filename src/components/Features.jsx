@@ -51,7 +51,7 @@ const Features = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Construído com as <span className="text-gradient">melhores tecnologias</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
             Uma plataforma robusta e confiável, desenvolvida com as mais modernas tecnologias do mercado.
           </p>
         </div>
@@ -70,13 +70,13 @@ const Features = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                  <p className="text-slate-400">{feature.description}</p>
+                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               </div>
               
               <ul className="space-y-3">
                 {feature.details.map((detail, idx) => (
-                  <li key={idx} className="flex items-center text-slate-300">
+                  <li key={idx} className="flex items-center text-slate-200">
                     <div className="h-1.5 w-1.5 bg-emerald-500 rounded-full mr-3"></div>
                     <span className="text-sm">{detail}</span>
                   </li>

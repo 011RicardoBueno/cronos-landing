@@ -52,7 +52,8 @@
     height: 200%;
     top: -50%;
     left: -50%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 40%);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent 50%);
+    mix-blend-mode: screen;
     animation: rotate 20s linear infinite;
   }
 

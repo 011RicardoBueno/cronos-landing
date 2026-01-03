@@ -13,7 +13,14 @@ const Header = () => {
   ]
 
 return (
-    <header className="fixed w-full bg-gray-950/80 backdrop-blur-md z-50 border-b border-gray-800">
+    <header className="fixed w-full bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-800">
+      {/* Skip to main content link - Acessibilidade */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[100] bg-indigo-600 text-white px-4 py-2 rounded-lg"
+      >
+        Pular para conteúdo principal
+      </a>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -27,7 +34,8 @@ return (
                   key={link.href}
                   href={link.href}
                   onMouseEnter={() => setHoveredLink(link.href)}
-                  className="relative text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="relative text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  aria-label={`Navegar para ${link.label}`}
                 >
                   {link.label}
                   {hoveredLink === link.href && (
@@ -47,18 +55,24 @@ return (
             </div>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white p-2">
+            <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="lg:hidden p-2 rounded-lg hover:bg-slate-800 transition-colors"
+                  aria-label={isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+                  aria-expanded={isOpen}
+                  aria-controls="mobile-menu"
+                >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-gray-900 border-b border-gray-800">
+        <div id="mobile-menu" className="md:hidden bg-slate-900 border-b border-slate-800" role="menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#features" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Funcionalidades</a>
-            <a href="#pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Preços</a>
-            <a href="#faq" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
+            <a href="#features" className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Funcionalidades</a>
+            <a href="#pricing" className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Preços</a>
+            <a href="#faq" className="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">FAQ</a>
             <a href="https://cronos-ruby.vercel.app" target="_blank" rel="noopener noreferrer" className="w-full text-left bg-indigo-500 hover:bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium">
               Começar Agora
             </a>
